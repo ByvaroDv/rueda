@@ -1,7 +1,22 @@
 package rueda;
 
+/**
+ * Representa un vehículo, permitiendo realizar operaciones como viajes y rellenar el depósito.
+ * Encapsula los atributos relacionados con el combustible, coste por litro, capacidad del depósito y consumo medio.
+ * 
+ * @author Álvaro Romero Ponce
+ */
+
 public class Rueda_CM_Romero_Ponce_Alvaro_2324 {
 
+    /**
+     * Constructor de Rueda con parámetros para inicializar el estado del objeto.
+     * 
+     * @param combustibleQueda Combustible restante en el depósito.
+     * @param centimosLitro Costo del combustible por litro.
+     * @param capacidad Capacidad total del depósito de combustible.
+     */
+    
     private double combustible_queda;
     private double centimos_litro;
 
@@ -28,6 +43,13 @@ public class Rueda_CM_Romero_Ponce_Alvaro_2324 {
 
         return getCombustible_queda();
     }
+    
+    /**
+     * Realiza un viaje consumiendo combustible.
+     * 
+     * @param km Kilómetros a viajar.
+     * @throws Exception Si no hay suficiente combustible o la distancia es negativa.
+     */
 
     public void viaje(int km) throws Exception {
 
@@ -44,6 +66,15 @@ public class Rueda_CM_Romero_Ponce_Alvaro_2324 {
         this.setCombustible_queda(this.getCombustible_queda() - (km * this.getConsumo_CM_Romero_Ponce_Alvaro_2324() / 100));
 
     }
+    
+    /**
+     * Rellena el depósito de combustible.
+     * 
+     * @param litros Cantidad de litros a rellenar.
+     * @param dinero Dinero disponible para comprar combustible.
+     * @param centimosLitro_CM_Romero_Ponce_Alvaro_2324 Costo del combustible por litro.
+     * @throws Exception Si no se puede rellenar el depósito.
+     */
 
     public void rellenarDeposito(int litros, double dinero, double centimosLitro_CM_Romero_Ponce_Alvaro_2324) throws Exception {
 
